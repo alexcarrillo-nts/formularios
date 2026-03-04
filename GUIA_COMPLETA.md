@@ -1,15 +1,18 @@
 # 📱 Guía Completa de la Aplicación - Flutter Formularios
 
-## Tabla de Contenidos
-1. [Descripción General](#descripción-general)
-2. [Estructura del Proyecto](#estructura-del-proyecto)
-3. [Dependencias Utilizadas](#dependencias-utilizadas)
-4. [¿Qué es BLoC y Cubit?](#qué-es-bloc-y-cubit)
-5. [Guía Detallada de BLoC](#guía-detallada-de-bloc)
-6. [Diferencias entre BLoC y Cubit](#diferencias-entre-bloc-y-cubit)
-7. [Flujo de la Aplicación](#flujo-de-la-aplicación)
 
----
+## Tabla de Contenidos
+1. [Descripción General]
+2. [Estructura del Proyecto]
+3. [Dependencias Utilizadas]
+4. [¿Qué es BLoC y Cubit?]
+5. [Guía Detallada de BLoC]
+6. [Diferencias entre BLoC y Cubit]
+7. [Flujo de la Aplicación]
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## 🎯 Descripción General
 
@@ -21,7 +24,9 @@ Esta es una **aplicación educativa de Flutter** que demuestra tres conceptos cl
 - **BLoC Counter**: Ejemplo más complejo de gestión de estado con BLoC
 - **Register Screen**: Ejemplo de manejo de formularios con validaciones
 
----
+
+------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## 📁 Estructura del Proyecto
 
@@ -32,7 +37,7 @@ lib/
 │   ├── router/
 │   │   └── app_router.dart     # Configuración de rutas con GoRouter
 │   └── theme/
-│       └── app_theme.dart      # Tema visual de la app
+│       └── app_theme.dart      # Tema visual de la appº
 └── presentation/
     ├── blocs/                  # Gestores de estado
     │   ├── counter_bloc/       # Implementación con BLoC
@@ -51,7 +56,9 @@ lib/
         └── custom_text_form_field.dart
 ```
 
----
+
+------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## 📦 Dependencias Utilizadas
 
@@ -71,7 +78,9 @@ Maneja la navegación entre pantallas de forma declarativa y eficiente.
 #### equatable
 Permite comparar objetos automáticamente, evitando escribir `==` y `hashCode` manualmente.
 
----
+
+------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## 🔄 ¿Qué es BLoC y Cubit?
 
@@ -125,7 +134,9 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
 }
 ```
 
----
+
+------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## 📚 Guía Detallada de BLoC
 
@@ -228,7 +239,7 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
 }
 ```
 
-### 📊 Flujo paso a paso de BLoC
+### 📊 Flujo paso a paso de BLoCs
 
 ```
 1. USUARIO PRESIONA BOTÓN
@@ -248,7 +259,9 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
 8. LA UI SE REDIBUJA
 ```
 
----
+
+------------------------------------------------------------------------------------------------------------------------------------
+
 
 ### Consumiendo el BLoC en la UI
 
@@ -275,7 +288,9 @@ BlocBuilder<CounterBloc, CounterState>(
 )
 ```
 
----
+
+------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## 🔄 Diferencias entre BLoC y Cubit
 
@@ -305,7 +320,9 @@ context.read<CounterBloc>().increaseBy(3);
 context.read<CounterBloc>().add(CounterIncreased(3));
 ```
 
----
+
+------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## 🗺️ Flujo de la Aplicación
 
@@ -364,61 +381,5 @@ context.read<CounterBloc>().add(CounterIncreased(3));
 - Email: debe ser formato válido
 - Password: mínimo 6 caracteres
 
----
 
-## 🎓 Aprende paso a paso
-
-### Nivel 1: Entiende la estructura
-1. Lee `main.dart` - Punto de entrada
-2. Lee `app_router.dart` - Cómo navegar
-3. Lee `home_screen.dart` - Las opciones
-
-### Nivel 2: Aprende Cubit
-1. Lee `counter_state.dart` - El estado
-2. Lee `counter_cubit.dart` - La lógica
-3. Lee `cubit_counter_screen.dart` - Cómo usarlo
-4. **Practica**: Agrega un botón que multiplique por 2
-
-### Nivel 3: Aprende BLoC
-1. Lee `counter_event.dart` - Los eventos
-2. Lee `counter_state.dart` - El estado
-3. Lee `counter_bloc.dart` - La lógica
-4. Lee `bloc_counter_screen.dart` - Cómo usarlo
-5. **Practica**: Agrega un nuevo evento `CounterMultiplied`
-
-### Nivel 4: Aplicaciones prácticas
-1. Crea un gestor de TODO con lista persistente
-2. Implementa un BLoC para manejar login
-3. Crea un carrito de compras con estado complejo
-
----
-
-## 💡 Conceptos Clave a Recordar
-
-### State Management = Las 3 Preguntas:
-1. **¿Qué información necesito?** → Estado
-2. **¿Qué puede cambiar esa información?** → Eventos (BLoC) o Métodos (Cubit)
-3. **¿Cómo cambio esa información?** → Lógica en Manejadores
-
-### El ciclo es SIMPLE:
-```
-Evento/Acción → Procesar → Emit nuevo estado → UI se actualiza
-```
-
-### Regla de Oro:
-> **NUNCA** modifiques el estado directamente. **SIEMPRE** emite un estado nuevo.
-
----
-
-## 🚀 Recursos Adicionales
-
-- [Documentación flutter_bloc](https://bloclibrary.dev/)
-- [Documentación go_router](https://pub.dev/packages/go_router)
-- [Patrón BLoC oficial](https://bloclibrary.dev/bloc-concepts/)
-
----
-
-**Autor**: Flutter Learning Guide  
-**Fecha**: 2024  
-**Nivel**: Principiante a Intermedio
-
+------------------------------------------------------------------------------------------------------------------------------------
